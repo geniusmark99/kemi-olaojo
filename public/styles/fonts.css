@@ -1,0 +1,36 @@
+@font-face {
+    font-family: 'neueMachina-light';
+    src: url('../fonts/NeueMachina-Light.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neueMachina-regular';
+    src: url('../fonts/NeueMachina-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'neueMachina-ultrabold';
+    src: url('../fonts/NeueMachina-Ultrabold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'neueMontreal-medium';
+    src: url('../fonts/ppneuemontreal-medium.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'neueMontreal-semibolditalic';
+    src: url('../fonts/ppneuemontreal-semibolditalic.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}

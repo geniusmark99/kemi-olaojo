@@ -1,0 +1,178 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+
+@layer components {
+    .ui-btn {
+        @apply flex items-center justify-center rounded-md text-center font-medium text-white p-3
+    }
+
+    .kemi-ojo-text-color {
+        @apply font-extrabold drop-shadow-md bg-clip-text text-transparent bg-gradient-to-r from-kemi-ojo to-kemi-ojo-purple
+    }
+
+    .kemi-ojo-text-color-light {
+        @apply drop-shadow-md bg-clip-text text-transparent bg-gradient-to-r from-kemi-ojo to-kemi-ojo-purple
+    }
+
+
+    .kemi-ojo-text-link {
+        @apply font-extrabold drop-shadow-md bg-clip-text text-transparent bg-gradient-to-r from-kemi-ojo to-kemi-ojo-purple
+    }
+
+    .kemi-ojo-text-link:hover {
+        @apply underline
+    }
+
+    .kemi-ojo-bg {
+        @apply bg-gradient-to-r from-kemi-ojo to-kemi-ojo-purple
+    }
+
+
+
+
+    .header-navbar a {
+        padding: 10px;
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+        display: inline-block;
+        text-decoration: none;
+        /* -webkit-transition: 0.3s ease-out;
+        -moz-transition: 0.3s ease-out; */
+        transition: 0.3s ease-out;
+    }
+
+    .header-navbar a span:before {
+        width: 5px;
+        height: 5px;
+        background: transparent;
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        border-top: 2px solid;
+        border-left: 2px solid;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .header-navbar a span:after {
+        width: 6px;
+        height: 6px;
+        background: transparent;
+        content: "";
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        border-right: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .header-navbar a:before {
+        width: 6px;
+        height: 6px;
+        background: transparent;
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        border-right: 2px solid #fff;
+        border-top: 2px solid #fff;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .header-navbar a:after {
+        width: 6px;
+        height: 6px;
+        background: transparent;
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        border-left: 2px solid #fff;
+        border-bottom: 2px solid #fff;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        transition: 0.3s;
+        opacity: 0;
+    }
+
+    .header-navbar a:hover,
+    .header-navbar a.active {
+        color: #fff;
+    }
+
+    .header-navbar a:hover:before,
+    .header-navbar a.active:before {
+        opacity: 1;
+        right: 5px;
+        top: 5px;
+    }
+
+    .header-navbar a:hover:after,
+    .header-navbar a.active:after {
+        opacity: 1;
+        left: 5px;
+        bottom: 5px;
+    }
+
+    .header-navbar a:hover span:before,
+    .header-navbar a.active span:before {
+        opacity: 1;
+        left: 5px;
+        top: 5px;
+    }
+
+    .header-navbar a:hover span:after,
+    .header-navbar a.active span:after {
+        opacity: 1;
+        right: 5px;
+        bottom: 5px;
+    }
+
+
+}
+
+
+.circle-animate {
+    background: linear-gradient(45deg, #ff6b6b, #1D4ED8, #E3742D, #4834d4);
+    background-size: 300% 300%;
+    animation: gradientAnimation 6s infinite;
+    position: relative;
+    overflow: hidden;
+}
+
+
+
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
