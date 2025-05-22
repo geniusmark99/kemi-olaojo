@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 use Illuminate\Support\Facades\Hash;
@@ -16,6 +17,8 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\UserCourse;
 use App\Services\PrintfulService;
 use App\Mail\ContactMessageMail;
+use App\Helpers\VideoHelper;
+
 
 
 class PageController extends Controller
@@ -106,23 +109,27 @@ class PageController extends Controller
     }
 
 
-    // HERE
     public function studentCourseDetails($id)
     {
         $course = Course::where('id', $id)->firstOrFail();
+        // $videoPath = storage_path('app/public/storage/images/' . $course->course_video_url);
+        // $duration = VideoHelper::getDuration($videoPath);
+        // $userHasAccess = UserCourse::where('user_id', auth()->id())
+        //     ->where('course_id', $id)
+        //     ->where('expires_at', '>', now())
+        //     ->exists();
 
-        $userHasAccess = UserCourse::where('user_id', auth()->id())
-            ->where('course_id', $id)
-            ->where('expires_at', '>', now())
-            ->exists();
 
-        if (!$userHasAccess) {
-            return redirect()->route('student.dashboard')->with('error', 'You need to enroll first.');
-        } elseif ($userHasAccess) {
-            return redirect()->route('course.cbt', ['course_code' => $course->course_code]);
-        }
-        // return View('general.student-lms-course-details', compact('course'));
+
+        // if (!$userHasAccess) {
+        //     return redirect()->route('student.dashboard')->with('error', 'You need to enroll first.');
+        // } elseif ($userHasAccess) {
+        //     return redirect()->route('course.cbt', ['course_code' => $course->course_code]);
+        // }
+        return View('general.student-lms-course-details', compact('course'));
     }
+
+
 
 
 

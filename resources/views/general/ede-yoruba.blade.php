@@ -3,14 +3,14 @@
 
 @section('app-content')
     <main class="lg:mx-auto  mt-[70px] lg:mt-[90px] overflow-x-hidden">
-
+        {{-- 
         <div class="w-full h-8 items-center flex justify-center">
             <div class="rounded-full bg-white border shadow-md mt-4 shadow-blue-400/50 px-10">
                 <h2
                     class="text-base md:text-2xl font-semibold text-transparent bg-clip-text bg-gradient-to-tr from-blue-600 to-cyan-400">
                     Coming soon...</h2>
             </div>
-        </div>
+        </div> --}}
 
         <section class="h-auto lg:h-[80vh]  text-white  px-5 py-6  lg:px-20 mb-20">
             <div class="flex flex-col-reverse lg:flex-row gap-y-10 lg:gap-x-20  h-full">
@@ -122,7 +122,7 @@
 
         <div class="h-auto py-10 mx-5 md:mx-20 bg-white">
             <h1 class="font-semibold text-xl md:text-2xl lg:text-3xl text-center py-10">Books by Olúwákẹ́mi O. Ọlá-Òjó</h1>
-            <h1 class="font-semibold text-kemi-ojo text-lg md:text-xl lg:text-2xl text-center py-10">Coming soon...</h1>
+            {{-- <h1 class="font-semibold text-kemi-ojo text-lg md:text-xl lg:text-2xl text-center py-10">Coming soon...</h1> --}}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 <div class="bg-blue-500 h-[60vh] rounded-lg overflow-hidden">
                     <img src="{{ asset('./images/awon-yoruba.jpeg') }}" alt="awon yoruba book" draggable="false">
@@ -176,7 +176,7 @@
             <div class="flex flex-col lg:flex-row items-center w-full lg:mx-20 lg:items-center lg:justify-center">
                 <div class="w-full lg:w-6/12 flex justify-center py-10">
 
-                    <div class="flex gap-x-2 lg:gap-x-6">
+                    {{-- <div class="flex gap-x-2 lg:gap-x-6">
                         <div class="border rounded-full border-black shadow-sm h-[200px] lg:h-[350px] w-[100px] lg:w-[150px] bg-cover bg-[50%] bg-no-repeat"
                             style="background-image: url('./images/black-smiling-man.jpg');">
                         </div>
@@ -204,7 +204,8 @@
                             style="background-image: url('./images/smiling-girl.jpg');">
                         </div>
                     </div>
-                    <div class="flex"></div>
+                    <div class="flex"></div> --}}
+                    <img src="{{ asset('/images/ile-eko-logo.jpeg') }}" />
                 </div>
                 <div class="w-full lg:w-6/12 ">
                     <div class="flex flex-col -inset-1 items-center  justify-center lg:justify-start lg:items-start">

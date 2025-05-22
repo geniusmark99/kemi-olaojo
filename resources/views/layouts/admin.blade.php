@@ -10,7 +10,7 @@
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 
-    <link rel="stylesheet" href="{{ asset('/build/assets/app-Cc6DndNb.css') }}">
+    <link rel="stylesheet" href="{{ asset('/build/assets/app-BvZo01rk.css') }}">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="{{ asset('/scripts/aos.js') }}"></script>
     @yield('admin-style')

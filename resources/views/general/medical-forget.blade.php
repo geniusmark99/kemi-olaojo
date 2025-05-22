@@ -7,7 +7,7 @@
 
 
     <div class="relative overflow-hidden h-screen">
-        <div class="flex justify-center items-center h-screen bg-white dark:bg-dark">
+        <div class="flex justify-center items-center h-screen bg-blue-50 dark:bg-dark">
             <div class="sm:px-12 p-5">
                 <div class="flex h-screen items-center px-3 lg:justify-start justify-center">
                     <div class="max-w-[420px] w-full mx-auto">
@@ -21,7 +21,8 @@
                         <p class="text-violet-500 mt-4 text-sm font-medium text-center">Please enter the email address
                             associated with
                             your account and We will email you a link to reset your password.</p>
-                        <form class="mt-6" method="POST" action="{{ route('password.email') }}">
+                        <form x-data="{ loading: false }" @submit="loading = true" class="mt-6" method="POST"
+                            action="{{ route('password.email') }}">
                             @csrf
 
                             <div class="mb-4">
@@ -41,11 +42,29 @@
                                 </div>
                             </div>
 
-                            <button type="submit"
-                                class="group relative flex items-stretch justify-center p-0.5 text-center 
-                                font-medium bg-kemi-ojo/50 hover:bg-kemi-ojo text-white w-full rounded-md"><span
-                                    class="flex items-center gap-2 transition-all duration-150 justify-center rounded-md px-4 py-2 text-sm">Forgot
-                                    Password</span></button>
+
+
+
+                            <button type="submit" :disabled="loading"
+                                class="group relative flex items-center justify-center p-0.5 text-center font-medium 
+                                bg-kemi-ojo/60 hover:bg-kemi-ojo
+                             text-white w-full rounded-md">
+
+                                <template x-if="loading">
+                                    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10"
+                                            stroke="currentColor" stroke-width="4"></circle>
+                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z">
+                                        </path>
+                                    </svg>
+                                </template>
+
+                                <span x-text="loading ? 'Resetting...' : 'Forget Password'"
+                                    class="flex items-center gap-2 transition-all duration-150 justify-center rounded-md px-4 py-2 text-sm">
+
+                                </span>
+                            </button>
 
                         </form>
 

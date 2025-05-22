@@ -8,11 +8,16 @@
     <title>@yield('page-title')</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="{{ asset('/build/assets/app-Cc6DndNb.css') }}">
-    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    {{-- <link rel="stylesheet" href="{{ asset('/build/assets/app-Cc6DndNb.css') }}"> --}}
+    {{-- <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
     {{-- <link rel="stylesheet" href="{{ asset('/build/assets/app-DIE3Fw_w.css') }}">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script> --}}
+
     <link rel="stylesheet" href="{{ asset('/styles/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('/build/assets/app-BvZo01rk.css') }}">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+
     <script src="{{ asset('/scripts/aos.js') }}"></script>
     <script src="{{ asset('/scripts/swiper-bundle.min.js') }}"></script>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />

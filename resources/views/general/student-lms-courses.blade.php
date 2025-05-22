@@ -30,10 +30,10 @@
         <div class="flex flex-col justify-start gap-y-10">
 
             <div class="flex justify-start flex-col">
-                <h1 class="text-2xl font-semibold text-center text-blue-500">Obstetrics Topics</h1>
+                {{-- <h1 class="text-2xl font-semibold text-center text-blue-500">Obstetrics Topics</h1> --}}
 
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 ">
-
+                <div class="flex gap-8 justify-center items-center">
+                    {{-- <div class="grid grid-cols-1 md:grid-cols-3"></div> --}}
                     @forelse ($courses as $course)
                         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden">
                             <img src="{{ $course->course_thumbnail_url }}" alt="Course"
@@ -71,9 +71,8 @@
 
                             </div>
                         </div>
-
                     @empty
-                        <div class="w-full flex justify-center">
+                        <div class="w-full flex justify-center ">
                             <div class="max-w-[300px] lg:min-w-[500px]">
 
                                 <div class="flex flex-col gap-y-5 justify-center items-center mt-5 relative">

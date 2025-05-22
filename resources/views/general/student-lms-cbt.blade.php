@@ -1,4 +1,4 @@
-@extends('layouts.lms')
+@extends('layouts.page')
 @section('lms-title', 'Medical LMS: ULTRASOUND CBT')
 @section('lms-content')
     <div

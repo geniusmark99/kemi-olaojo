@@ -13,10 +13,6 @@
 
                 <h2 class="text-sm md:text-base lg:text-2xl font-bold whitespace-nowrap">{{ $course->course_title }}</h2>
 
-                {{-- 
-                <div class="w-[300px] h-3 bg-blue-400/20 rounded-full overflow-hidden">
-                    <div class="w-[30%] h-3 bg-blue-400"></div>
-                </div> --}}
 
 
                 <div class="flex items-center gap-x-0.5 md:gap-x-2">

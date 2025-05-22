@@ -5,8 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#225fcb" />
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>@yield('app-title')</title>
     <link rel="preconnect" href="https://fonts.bunny.net">
@@ -14,7 +13,7 @@
     <link rel="stylesheet" href="{{ asset('styles/fonts.css') }}">
     {{-- @vite(['resources/css/app.css', 'resources/js/app.js']) --}}
 
-    <link rel="stylesheet" href="{{ asset('/build/assets/app-Lbr4e6rW.css') }}">
+    <link rel="stylesheet" href="{{ asset('/build/assets/app-BvZo01rk.css') }}">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
         html {

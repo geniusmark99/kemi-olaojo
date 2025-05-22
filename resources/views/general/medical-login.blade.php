@@ -3,10 +3,10 @@
 @section('normal-content')
     <x-medical-auth-header />
     <div class="relative overflow-hidden lg:mt-[80px]">
-        <div class="flex justify-center items-center h-screen" style="background-image: url('/images/grainy-noise.svg');">
+        <div class="flex justify-center items-center h-screen bg-blue-50">
             <div class="w-full px-4 py-6 lg:px-5 lg:py-8 lg:w-[500px] max-w-[500px] ">
                 <div
-                    class="flex w-full  border-kemi-ojo/50 p-5 lg:p-7 bg-white rounded-md shadow-md shadow-kemi-ojo/20 
+                    class="flex w-full  border-kemi-ojo/50 p-5 lg:p-7 bg-white rounded-2xl shadow-md shadow-blue-200 
                      items-center px-3 lg:justify-start justify-center">
 
                     <div class=" w-full mx-auto">
@@ -22,7 +22,8 @@
                             Login into your dashboard</p>
 
 
-                        <form class="mt-6 w-full min-w-full" method="POST" action="{{ route('login') }}">
+                        <form x-data="{ loading: false }" @submit="loading = true" class="mt-6 w-full min-w-full" method="POST"
+                            action="{{ route('login') }}">
                             @csrf
 
                             <div class="mb-4">
@@ -57,13 +58,34 @@
 
 
 
-                            <button type="submit"
+                            {{-- <button type="submit"
                                 class="group relative flex items-stretch justify-center p-0.5 text-center font-medium 
                                 bg-kemi-ojo/60 hover:bg-kemi-ojo
                              text-white w-full rounded-md"><span
                                     class="flex items-center gap-2 transition-all duration-150 justify-center rounded-md px-4 py-2 text-sm">
                                     Login
-                                </span></button>
+                                </span></button> --}}
+
+                            <button type="submit" :disabled="loading"
+                                class="group relative flex items-center justify-center p-0.5 text-center font-medium 
+                                bg-kemi-ojo/60 hover:bg-kemi-ojo
+                             text-white w-full rounded-md">
+
+                                <template x-if="loading">
+                                    <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg"
+                                        fill="none" viewBox="0 0 24 24">
+                                        <circle class="opacity-25" cx="12" cy="12" r="10"
+                                            stroke="currentColor" stroke-width="4"></circle>
+                                        <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z">
+                                        </path>
+                                    </svg>
+                                </template>
+
+                                <span x-text="loading ? 'Logging in...' : 'Login'"
+                                    class="flex items-center gap-2 transition-all duration-150 justify-center rounded-md px-4 py-2 text-sm">
+
+                                </span>
+                            </button>
 
                         </form>
 

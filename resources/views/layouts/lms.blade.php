@@ -15,7 +15,7 @@
 
 
 
-    <link rel="stylesheet" href="{{ asset('/build/assets/app-Cc6DndNb.css') }}">
+    <link rel="stylesheet" href="{{ asset('/build/assets/app-BvZo01rk.css') }}">
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
     <link rel="stylesheet" href="{{ asset('/styles/swiper-bundle.min.css') }}">

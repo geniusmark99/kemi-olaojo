@@ -14,7 +14,6 @@
                 <a href="{{ route('student.courses') }}"
                     class="bg-yellow-400 text-gray-800 px-8 py-3 rounded-lg text-sm md:text-xl lg:text-2xl transition-transform transform hover:scale-105">Browse
                     Lecture</a>
-
             </div>
         </div>
     </div>
@@ -29,7 +28,7 @@
                 <div class="grid grid-cols-1 mx-4 lg:mx-10 md:grid-cols-3 gap-8">
                     @foreach ($courses as $course)
                         <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition-all overflow-hidden">
-                            <img src="{{ $course->course_thumbnail_url }}" alt="Course"
+                            <img src="/storage/{{ $course->course_thumbnail_url }}" alt="Course"
                                 class="w-full h-48 object-cover rounded-md mb-4">
                             <h3 class="text-xl font-semibold text-gray-800 mb-4">
                                 {{ $course->course_title }}
@@ -42,7 +41,7 @@
 
 
 
-                                @if (!$course->isEnrolled())
+                                {{-- @if (!$course->isEnrolled())
                                     <form action="{{ route('payment.checkout', $course->id) }}" method="POST">
                                         @csrf
 
@@ -51,11 +50,11 @@
                                         </button>
 
                                     </form>
-                                @else
-                                    <a href="{{ route('student.courses-details', $course->id) }}"
-                                        class="bg-blue-600 text-white px-4 py-2 rounded-lg">Watch Course
-                                    </a>
-                                @endif
+                                @else --}}
+                                <a href="{{ route('student.courses-details', $course->id) }}"
+                                    class="bg-blue-600 text-white px-4 py-2 rounded-lg">Watch Course
+                                </a>
+                                {{-- @endif --}}
 
 
                             </div>

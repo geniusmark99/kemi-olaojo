@@ -37,7 +37,7 @@ class PaymentController extends Controller
         return redirect($checkoutSession->url);
     }
 
-    public function paymentSuccess(Request $request, $course_id)
+    public function paymentSuccess($course_id)
     {
         $user = Auth::user();
         $course = Course::findOrFail($course_id);

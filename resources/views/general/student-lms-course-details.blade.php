@@ -11,7 +11,7 @@
                 <div class="w-full max-w-6xl mx-auto px-4">
                     <div class="bg-black rounded-lg overflow-hidden shadow-lg">
 
-                        <x-video-view src="{{ $course->course_video_url }}" />
+                        <x-video-view src="/storage/{{ $course->course_video_url }}" />
 
                     </div>
                     <div class="mt-4">
@@ -30,11 +30,11 @@
                         </div>
 
                         <div class="w-full p-4 rounded-lg shadow-lg shadow-kemi-ojo/10 flex space-x-4 items-center">
-                            <img src="{{ $course->course_thumbnail_url }}" alt="Video Thumbnail"
+                            <img src="/storage/{{ $course->course_thumbnail_url }}" alt="Video Thumbnail"
                                 class="w-24 h-24 rounded-lg object-cover">
                             <div class="flex flex-col justify-start items-start gap-y-2">
                                 <h2 class="text-lg font-bold">Take CBT</h2>
-                                <p class="text-xs">Duration: 8 mins</p>
+                                <p class="text-xs">Duration: 5 minutes</p>
                                 <p>
                                     <a href="{{ route('course.cbt', $course->course_code) }}"
                                         class="px-2 text-white py-1 bg-kemi-ojo rounded-lg text-sm">Take

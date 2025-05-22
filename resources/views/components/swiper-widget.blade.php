@@ -34,8 +34,15 @@
 
                         </div>
 
-                        <div class="relative bg-cover bg-center h-[50vh] md:h-[70vh] lg:h-[95vh] w-full lg:w-6/12"
-                            style="background-image: url('/images/bg001.jpg');">
+                        {{-- <div class="relative bg-cover bg-center h-[50vh] md:h-[70vh] lg:h-[95vh] w-full lg:w-6/12"
+                            style="background-image: url('/images/kemi-olaojo.jpg');">
+                            <div class="absolute inset-0 bg-gradient-to-b from-kemi-ojo/10 to-kemi-ojo-purple/10"></div>
+
+                        </div> --}}
+
+
+                        <div class="relative bg-cover bg-[url('/images/kemi-olaojo.jpg')] bg-no-repeat h-[50vh] md:h-[70vh] lg:scale-90 lg:h-[100vh] w-full lg:w-6/12"
+                            style="background-image: url('/images/kemi-olaojo.jpg'); ">
                             <div class="absolute inset-0 bg-gradient-to-b from-kemi-ojo/10 to-kemi-ojo-purple/10"></div>
 
                         </div>
@@ -113,13 +120,20 @@
 
                         </div>
 
-                        <div class="relative bg-cover bg-[url('/images/kemi-olaojo.jpg')] bg-no-repeat h-[50vh] md:h-[70vh] lg:scale-90 lg:h-[100vh] w-full lg:w-6/12"
-                            style="background-image: url('/images/kemi-olaojo.jpg'); ">
-                            {{-- <img  src="/images/kemi-olaojo.jpg" alt="Kemi Olaojo"
-                                class="hidden lg:block absolute inset-0 w-full h-full object-contain scale-90" /> --}}
+                        {{-- <div class="relative bg-cover bg-[url('/images/bg001.jpg')] bg-no-repeat h-[50vh] md:h-[70vh] lg:scale-90 lg:h-[100vh] w-full lg:w-6/12"
+                            style="background-image: url('/images/bg001.jpg'); ">
+                            <div class="absolute inset-0 bg-gradient-to-b from-kemi-ojo/10 to-kemi-ojo-purple/10"></div>
+
+                        </div> --}}
+
+                        <div class="relative bg-cover bg-center h-[50vh] md:h-[70vh] lg:h-[95vh] w-full lg:w-6/12"
+                            style="background-image: url('/images/bg001.jpg');">
                             <div class="absolute inset-0 bg-gradient-to-b from-kemi-ojo/10 to-kemi-ojo-purple/10"></div>
 
                         </div>
+
+
+
 
                     </div>
                 </div>

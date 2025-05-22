@@ -1,8 +1,8 @@
 @extends('layouts.admin-auth')
 @section('admin-content')
-    <main class="flex justify-center items-center h-screen">
+    <main class="flex justify-center items-center h-screen bg-blue-50">
         <div class="w-full max-w-md mx-auto p-6">
-            <div class="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm">
+            <div class="mt-7 bg-white border-2 border-blue-600/20 rounded-xl shadow-sm">
                 <div class="p-4 sm:p-7">
                     <div class="text-center">
                         <h1 class="block text-2xl font-bold text-gray-800">Admin Login</h1>
@@ -16,10 +16,10 @@
 
 
                         <!-- Form -->
-                        <form method="POST" action="{{ route('admin.login') }}">
+                        <form x-data="{ loading: false }" @submit="loading=true" method="POST"
+                            action="{{ route('admin.login') }}">
                             @csrf
                             <div class="grid gap-y-4">
-                                <!-- Form Group -->
                                 <div>
                                     <label for="email" class="block text-sm mb-">Email address</label>
                                     <div class="relative">
@@ -67,9 +67,27 @@
                                 <!-- End Form Group -->
 
 
-                                <button type="submit"
-                                    class="w-full py-3 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">Sign
-                                    in</button>
+                                <button type="submit" type="submit" :disabled="loading"
+                                    class="w-full py-1 px-4 inline-flex justify-center items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
+                                    <template x-if="loading">
+                                        <svg class="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg"
+                                            fill="none" viewBox="0 0 24 24">
+                                            <circle class="opacity-25" cx="12" cy="12" r="10"
+                                                stroke="currentColor" stroke-width="4"></circle>
+                                            <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z">
+                                            </path>
+                                        </svg>
+                                    </template>
+
+                                    <span x-text="loading ? 'Logging in...' : 'Login'"
+                                        class="flex items-center gap-2 transition-all duration-150 justify-center rounded-md px-4 py-2 text-sm">
+
+                                    </span>
+
+
+
+
+                                </button>
                             </div>
                         </form>
                         <!-- End Form -->

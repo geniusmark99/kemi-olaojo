@@ -212,7 +212,6 @@
 
                 <div class="w-full lg:w-6/12">
                     <div class="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
-                        <!-- Title -->
                         <div class="mx-auto max-w-2xl mb-8 lg:mb-14 text-center">
                             <h2 class="text-3xl lg:text-4xl text-kemi-ojo font-bold">
                                 Explore tools
@@ -279,7 +278,7 @@
             <div class="container flex flex-col items-center px-4 py-12 mx-auto xl:flex-row">
                 <div class="flex justify-center xl:w-1/2">
                     <img class="h-80 w-80 sm:w-[28rem] onj sm:h-[28rem] flex-shrink-0 object-cover rounded-full"
-                        src="{{ asset('/images/gynecologist-performing-ultrasound-consultation.jpg') }}"
+                        src="{{ asset('/images/protokos-medical-ultrasound.jpeg') }}"
                         alt="gynecologist performing ultrasound consultation">
                 </div>
 
@@ -310,8 +309,6 @@
                             </p>
                         </div>
                     </div>
-
-
 
                     <div class="mt-6 sm:-mx-2">
                         <div class="inline-flex w-full overflow-hidden rounded-lg shadow sm:w-auto sm:mx-2">
