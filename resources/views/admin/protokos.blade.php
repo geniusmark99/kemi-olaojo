@@ -136,7 +136,8 @@
                                             <td class="size-px whitespace-nowrap">
                                                 <div class="px-6 py-2">
                                                     <img class="text-sm size-10 rounded-md object-fit"
-                                                        src="{{ $course->course_thumbnail_url }}" alt="Course Image">
+                                                        src="/storage/{{ $course->course_thumbnail_url }}"
+                                                        alt="Course Image">
                                                 </div>
                                             </td>
                                             <td class="size-px whitespace-nowrap">
@@ -244,7 +245,7 @@
                                                                         class="text-xs lg:text-sm">Course Thumbnail</label>
                                                                     {{-- <input type="text" class="text-gray-500 rounded-md border border-gray-200 shadow-md" name="course_thumbnail_url" id="course_thumbnail_url" > --}}
                                                                     <img class="h-auto lg:h-20 w-full object-fill rounded-md"
-                                                                        src="{{ $course->course_thumbnail_url }}"
+                                                                        src="/storage/{{ $course->course_thumbnail_url }}"
                                                                         alt="">
                                                                 </div>
 
@@ -253,8 +254,9 @@
                                                                         class="text-xs lg:text-sm">Course Video</label>
 
                                                                     <video
-                                                                        class="h-auto lg:h-20 w-full object-fill rounded-md">
-                                                                        <source src="{{ $course->course_video_url }}"
+                                                                        class="h-auto lg:h-20 w-full object-fit rounded-md">
+                                                                        <source
+                                                                            src="/storage/{{ $course->course_video_url }}"
                                                                             type="video/mp4" />
                                                                     </video>
 
@@ -301,14 +303,31 @@
                                                         </div>
 
                                                         <div class="mt-4 flex w-full py-2 px-4">
-                                                            <button @click="open = false"
+                                                            {{-- <button @click="open = false"
                                                                 class="w-full px-4 py-2 bg-green-500 text-white rounded-lg hover:bg-green-600 transition-all focus:outline-none">
                                                                 Update
-                                                            </button>
-                                                            <button @click="alert('Action Confirmed!')"
+                                                            </button> --}}
+                                                            {{-- <button @click="alert('Action Confirmed!')"
                                                                 class="w-full ml-2 px-4 py-2 bg-rose-500 text-white rounded-lg hover:bg-rose-700 transition-all focus:outline-none">
                                                                 Delete
-                                                            </button>
+                                                            </button> --}}
+
+                                                            <form
+                                                                action="{{ route('admin.courses.delete', $course->id) }}"
+                                                                method="POST"
+                                                                onsubmit="return confirm('Are you sure you want to delete this course?');">
+                                                                @csrf
+                                                                @method('DELETE')
+                                                                {{-- <button type="submit"
+                                                                    class="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700">Delete</button>
+                                                             --}}
+
+                                                                <button type="submit"
+                                                                    class="w-full ml-2 px-4 py-2 bg-rose-500 text-white rounded-lg hover:bg-rose-700 transition-all focus:outline-none">
+                                                                    Delete
+                                                                </button>
+
+                                                            </form>
                                                         </div>
                                                     </div>
                                                 </div>

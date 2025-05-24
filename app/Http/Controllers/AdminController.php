@@ -70,7 +70,7 @@ class AdminController extends Controller
 
         if ($request->token == Session::get('admin_token')) {
             Session::forget('admin_token'); // Clear the token from session
-            app(DeviceService::class)->checkDevice($request);
+            // app(DeviceService::class)->checkDevice($request);
             return redirect()->route('admin.dashboard'); // Redirect to admin dashboard
         }
 
@@ -127,7 +127,6 @@ class AdminController extends Controller
 
     public function protokosId($id)
     {
-
         $question = CBTQuestion::where('id', $id)->firstOrFail();
         return view('admin.protokos-details', compact('question'));
     }
@@ -142,6 +141,7 @@ class AdminController extends Controller
             'course_thumbnail_url' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
             'course_price' => 'required|string',
         ]);
+
         if ($request->hasFile('course_thumbnail_url')) {
             // $courseThumbnail = Cloudinary::upload($request->file('course_thumbnail_url')->getRealPath())->getSecurePath();
 
@@ -150,12 +150,29 @@ class AdminController extends Controller
         }
         if ($request->hasFile('course_video_url')) {
             // $courseVideo = Cloudinary::uploadVideo($request->file('course_video_url')->getRealPath())->getSecurePath();
-            $courseVideo = $request->file('course_video_url')->store('images', 'public');
+            $courseVideo = $request->file('course_video_url')->store('videos', 'public');
             $validated['course_video_url'] =  $courseVideo;
         }
         Course::create($validated);
         return redirect()->back()->with('success', 'Question added successfully!');
     }
+
+
+    public function deleteCourse($id)
+    {
+        $course = Course::findOrFail($id);
+        if ($course->course_thumbnail_url && Storage::disk('public')->exists($course->course_thumbnail_url)) {
+            Storage::disk('public')->delete($course->course_thumbnail_url);
+        }
+        if ($course->course_video_url && Storage::disk('public')->exists($course->course_video_url)) {
+            Storage::disk('public')->delete($course->course_video_url);
+        }
+
+        $course->delete();
+
+        return redirect()->back()->with('success', 'Course deleted successfully!');
+    }
+
 
 
 

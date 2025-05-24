@@ -2,7 +2,16 @@
     <p class="text-base font-semibold md:text-2xl my-5 text-center">Upload a new lecture</p>
 
 
-    <div x-data="{ showSnackbar: {{ session('success') ? 'true' : 'false' }} }" x-init="if (showSnackbar) { setTimeout(() => showSnackbar = false, 5000) }" x-show="showSnackbar"
+    <div x-data="{ showSnackbar: {{ session('success') ? 'true' : 'false' }} }" x-init="if (showSnackbar) {
+        confetti({
+            particleCount: 200,
+            spread: 90,
+            origin: { y: 0.6 }
+        });
+        setTimeout(() => showSnackbar = false, 5000)
+    
+    
+    }" x-show="showSnackbar"
         x-transition:enter="transform ease-out duration-300 transition" x-transition:enter-start="opacity-0 translate-y-4"
         x-transition:enter-end="opacity-100 translate-y-0" x-transition:leave="transform ease-in duration-300 transition"
         x-transition:leave-start="opacity-100 translate-y-0" x-transition:leave-end="opacity-0 translate-y-4"
@@ -120,7 +129,7 @@
                         <label for="title" class="block font-medium text-sm">Lecture Price</label>
                         <div
                             class="flex items-center gap-x-1 px-2 focus:ring-1 bg-white border border-gray-300 rounded-lg focus:ring-blue-500">
-                            <div class="border-r px-1 text-gray-500">&#xA3;</div>
+                            <div class="border-r px-1 text-gray-500">&dollar;</div>
                             <input type="text" name="course_price" id="course_price"
                                 value="{{ old('course_price') }}"
                                 class="w-full outline-none focus:outline-none focus:border-none ring-0 focus:ring-0 border-none appearance-none placeholder:text-sm"
@@ -169,4 +178,6 @@
 
 
     </form>
+
+
 </div>

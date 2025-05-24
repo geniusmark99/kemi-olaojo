@@ -25,6 +25,7 @@ Route::controller(AdminController::class)->group(function () {
         Route::get('/admin/poem', 'poemEdit')->name('admin.poem');
         Route::get('/admin/protokos', 'protokos')->name('admin.protokos');
         Route::post('/admin/uploadcourse', 'uploadCourse')->name('admin.courses.upload');
+        Route::delete('/admin/courses/{id}', 'deleteCourse')->name('admin.courses.delete');
         Route::get('/admin/protokos/{id}', 'protokosId')->name('admin.protokos.id');
         Route::post('/admin/profile-update', 'profileUpdate')->name('admin.profile.update');
         Route::post('/admin/password-update', 'passwordUpdate')->name('admin.password.update');
