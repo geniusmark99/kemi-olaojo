@@ -520,7 +520,110 @@ class PageController extends Controller
 
     public function medical()
     {
-        return View('general.medical');
+
+
+        $courses = [
+            [
+                'title' => 'Gynae. 101',
+                'subtitle' => 'Understanding the Menstrual Cycle',
+                'content' => [
+                    'What a normal menstrual cycle is and the possible variations in its length.',
+                    'Why it is important to know where a patient is in her cycle before performing a Gynaecology scan.',
+                    'Normal ultrasound appearances for the different menstrual phases.',
+                    'The effects of IUCD/IUS and oral contraceptive pills on the menstrual cycle and their corresponding ultrasound appearances.',
+                    'Case presentations.',
+                    'There is a quiz at the end for revision and self-assessment.',
+                ],
+            ],
+            [
+                'title' => 'Gynae. 102',
+                'subtitle' => 'The Role of Ultrasound in Fertility Treatment',
+                'content' => [
+                    'What infertility is.',
+                    'Types of infertility.',
+                    'Ultrasound-identifiable causes of infertility.',
+                    'Role of ultrasound before, during, and after fertility treatment.',
+                    'Case presentations.',
+                    'There is a quiz at the end for revision and self-assessment.',
+                ],
+            ],
+            [
+                'title' => 'Gynae. 103',
+                'subtitle' => 'The Role of Ultrasound in Assessing IUCD/IUS',
+                'content' => [
+                    'Exploring what IUCD and IUS are.',
+                    'How each functions.',
+                    'The clinical indications for scanning a woman with a known IUS/IUCD in situ.',
+                    'Ultrasound appearances of IUS/IUCD.',
+                    'The implications of an incorrectly positioned IUS/IUCD for the patient.',
+                    'Case presentations.',
+                    'There is a quiz at the end for revision and self-assessment.',
+                ],
+            ],
+            [
+                'title' => 'Gynae. 104',
+                'subtitle' => 'Ultrasound in the Management of Fibroids in a Non-Pregnant Woman',
+                'content' => [
+                    'What a fibroid is.',
+                    'Types of fibroids.',
+                    'Effects of fibroids on a non-pregnant woman.',
+                    'Why fibroids should be identified, located, measured, documented, and monitored.',
+                    'Case presentations.',
+                    'There is a quiz at the end for revision and self-assessment.',
+                ],
+            ],
+            [
+                'title' => 'Gynae. 105',
+                'subtitle' => 'The Role of Ultrasound in the Assessment of the Postmenopausal Woman',
+                'content' => [
+                    'Who is a postmenopausal woman?',
+                    'The clinical indications for scanning postmenopausal women.',
+                    'Which method of scanning should be used—transabdominal (TA), transvaginal (TVS), or both?',
+                    'Some useful tips.',
+                    'Case presentations.',
+                    'Why there may be a need for follow-up scans.',
+                    'There is a quiz at the end for revision and self-assessment.',
+                ],
+            ],
+            [
+                'title' => 'Gynae. 106',
+                'subtitle' => 'Role of Ultrasound in Ovarian Cysts Assessment',
+                'content' => [
+                    'What is an ovarian cyst?',
+                    'A pictorial presentation of types of ovarian cysts and corresponding ultrasound approaches.',
+                    'Clinical indications for scanning a patient with a suspected or known cyst.',
+                    'What to look for when a cyst is seen on ultrasound.',
+                    'Other diagnostic imaging examinations that might be needed.',
+                    'There is a quiz at the end for revision and self-assessment.',
+                ],
+            ],
+            [
+                'title' => 'Gynae. 107',
+                'subtitle' => 'The Role of Ultrasound in Assessing Uterine Abnormalities – Parts 1 and 2',
+                'content' => [
+                    'What uterine abnormalities are.',
+                    'How common they are.',
+                    'Types of uterine abnormalities.',
+                    'The ultrasound appearances of common uterine abnormalities.',
+                    'The effect of uterine abnormalities on a non-pregnant patient.',
+                    'The consequences of uterine abnormalities on a pregnant patient.',
+                    'Various case presentations.',
+                    'Why scan the kidneys in a woman with a uterine abnormality?',
+                    'Other diagnostic imaging examinations that might be needed.',
+                    'There is a quiz at the end for revision and self-assessment.',
+                ],
+            ],
+            [
+                'title' => 'Gynae. 108',
+                'subtitle' => 'The Role of Ultrasound in [Incomplete Title]',
+
+                'content' => [
+                    'Content to be updated.',
+                ],
+            ],
+        ];
+
+        return View('general.medical', compact('courses'));
     }
 
     public function favourStore()
@@ -694,13 +797,23 @@ class PageController extends Controller
     {
         $products = $this->printfulService->getSyncedProducts();
         $products = $products['result'];
-        // $products = array_slice($products, 0, 30);
-        // return response()->json($products);
         return view('general.all-products', compact('products'));
     }
 
     public function yorubaWeb()
     {
-        return View('general.ede-yoruba');
+        $books = [
+            ['img_url' => '/images/awon-yoruba.jpeg'],
+            ['img_url' => '/images/ayeye-ojo.jpeg'],
+            ['img_url' => '/images/aburo-mi.jpeg'],
+            ['img_url' => '/images/iwe-onka-mi.jpeg'],
+            ['img_url' => '/images/ise-ti-awon.jpeg'],
+            ['img_url' => '/images/aburo-mi.jpeg'],
+            ['img_url' => '/images/ekaabo.jpeg'],
+            ['img_url' => '/images/ewa-awon.jpg'],
+            ['img_url' => '/images/iwe-isiro.jpeg'],
+            ['img_url' => '/images/ni-yoruba.jpeg'],
+        ];
+        return View('general.ede-yoruba', compact('books'));
     }
 }

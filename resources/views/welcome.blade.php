@@ -232,10 +232,15 @@
                             <h3 class="text-xl font-semibold kemi-ojo-text-color">
                                 Ẹ̀kọ́ Èdè Yorùbá
                             </h3>
-                            <p class="mt-3 text-gray-700">
-                                Master the art of diagnostic imaging with Ultrasound Training. Gain expert skills, practical
-                                experience, and the credentials to advance your medical career
-                            </p>
+                            <div class="bg-rose-500 text-xl mb-4 text-center text-white py-2 rounded-xl">
+                                Coming soon
+                            </div>
+
+                            <a href="{{ route('favour') }}"
+                                class="cursor-pointer px-5 block text-center py-2 bg-kemi-ojo hover:bg-kemi-ojo/80 pt-2 text-white  rounded-xl">Yorùbá
+                                books
+                                are available in
+                                Store</a>
                         </div>
                         <div class="mt-auto flex border-t border-gray-200 divide-x divide-gray-200">
                             <a class="w-full py-3 px-4 inline-flex justify-center bg-kemi-ojo text-white items-center gap-x-2 text-sm font-medium rounded-es-xl hover:kemi-ojo-bg hover:text-white transition-all shadow-sm focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none"
@@ -321,40 +326,57 @@
                 <!-- Title -->
                 <div class="flex justify-center items-center pb-10">
                     <h2 class="text-xl sm:text-2xl lg:text-3xl text-white font-semibold text-center">
-                        Loved by business and individuals across the globe
+                        Testimonials
                     </h2>
                 </div>
                 <!-- End Title -->
 
                 <!-- Grid -->
-                <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6  my-20">
+                <div class="  my-20">
+                    {{-- grid sm:grid-cols-2 lg:grid-cols-3 gap-6 --}}
                     <!-- Card -->
                     <div class="flex h-auto">
-                        <div class="flex flex-col bg-rose-100 rounded-xl">
+                        <div class="flex flex-col bg-blue-100 rounded-xl">
                             <div class="flex-auto p-4 md:p-6">
                                 <p class="text-base italic md:text-lg text-gray-800">
-                                    "Dr. Kemi Ojo is a visionary leader whose guidance and mentorship have profoundly
-                                    impacted
-                                    my career. Her dedication to excellence and her ability to inspire others are
-                                    unmatched."
+                                    <a href="#" class="font-semibold">Good Dads, Bad Dads by Kemi Ojo</a>
+                                    <br />In today&apos;s world, there&apos;s no official manual for parenting—but <a
+                                        href="#" class="font-semibold">Good
+                                        Dads, Bad
+                                        Dads by
+                                        Kemi Ojo </a> comes remarkably close. This spiritually rich and thought-provoking
+                                    book offers
+                                    a clear, practical guide for fathers and anyone preparing for the journey of fatherhood.
+                                    Drawing powerfully from biblical stories, Kemi Ojo doesn&apos;t just recount the lives
+                                    of
+                                    well-known fathers—she pulls out deep truths. Whether it&apos;s the silent missteps of
+                                    Eli or
+                                    the redemptive strength of Joseph, each chapter offers lessons that speak directly to
+                                    modern-day dads.
+                                    What makes this book special is its balance. It&apos;s not about being a perfect dad.
+                                    It&apos;s
+                                    about being intentional, taking responsibility, and understanding the spiritual weight
+                                    that comes with fatherhood.
+                                    If you&apos;re a father—or hope to be one— <a href="#"
+                                        class="font-semibold">Good Dads, Bad Dads</a> is more than just a good
+                                    read. It&apos;s a mirror, a manual, and a message of hope.
+
+
                                 </p>
                             </div>
 
-                            <div class="p-4 bg-rose-100 rounded-b-xl md:px-7">
+                            <div class="p-4 bg-white rounded-b-xl md:px-7">
                                 <div class="flex items-center gap-x-3">
                                     <div class="shrink-0">
                                         <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full"
-                                            src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                                            alt="Avatar">
+                                            src="{{ asset('images/Male_user.svg') }}" alt="Avatar">
                                     </div>
 
                                     <div class="grow">
                                         <p class="text-sm sm:text-base font-semibold text-gray-800 ">
-                                            Josh Tyson
+                                            Dr. O. Israel
                                         </p>
-                                        <p class="text-xs text-gray-800">
-                                            Product Manager | Capsule
-                                        </p>
+
                                     </div>
                                 </div>
                             </div>
@@ -362,42 +384,10 @@
                     </div>
                     <!-- End Card -->
 
-                    <!-- Card -->
-                    <div class="flex h-auto">
-                        <div class="flex flex-col bg-rose-100 rounded-xl">
-                            <div class="flex-auto p-4 md:p-6">
-                                <p class="text-base italic md:text-lg text-gray-800">
-                                    "Dr. Kemi Ojo is a visionary leader whose guidance and mentorship have profoundly
-                                    impacted
-                                    my career. Her dedication to excellence and her ability to inspire others are
-                                    unmatched."
-                                </p>
-                            </div>
 
-                            <div class="p-4 bg-rose-100 rounded-b-xl md:px-7">
-                                <div class="flex items-center gap-x-3">
-                                    <div class="shrink-0">
-                                        <img class="size-8 sm:h-[2.875rem] sm:w-[2.875rem] rounded-full"
-                                            src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=facearea&facepad=2&w=320&h=320&q=80"
-                                            alt="Avatar">
-                                    </div>
-
-                                    <div class="grow">
-                                        <p class="text-sm sm:text-base font-semibold text-gray-800">
-                                            Mark Okechukwu
-                                        </p>
-                                        <p class="text-xs text-gray-600">
-                                            Founder and CEO | S.I.T
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- End Card -->
 
                     <!-- Card -->
-                    <div class="flex h-auto">
+                    {{-- <div class="flex h-auto">
                         <div class="flex flex-col bg-rose-100 rounded-xl">
                             <div class="flex-auto p-4 md:p-6">
                                 <p class="text-base italic md:text-lg text-gray-800">
@@ -428,7 +418,7 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </div> --}}
                     <!-- End Card -->
                 </div>
                 <!-- End Grid -->

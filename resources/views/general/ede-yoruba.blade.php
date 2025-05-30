@@ -124,30 +124,11 @@
             <h1 class="font-semibold text-xl md:text-2xl lg:text-3xl text-center py-10">Books by Olúwákẹ́mi O. Ọlá-Òjó</h1>
             {{-- <h1 class="font-semibold text-kemi-ojo text-lg md:text-xl lg:text-2xl text-center py-10">Coming soon...</h1> --}}
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-                <div class="bg-blue-500 h-[60vh] rounded-lg overflow-hidden">
-                    <img src="{{ asset('./images/awon-yoruba.jpeg') }}" alt="awon yoruba book" draggable="false">
-                </div>
-                <div class="bg-green-500 h-[60vh] rounded-lg overflow-hidden">
-                    <img src="{{ asset('./images/ayeye-ojo.jpeg') }}" alt="ayeye ojo book" draggable="false">
-
-                </div>
-                <div class="bg-yellow-500 h-[60vh] rounded-lg overflow-hidden">
-                    <img src="{{ asset('./images/aburo-mi.jpeg') }}" alt="" draggable="false">
-
-                </div>
-
-                <div class="bg-blue-500 h-[60vh] rounded-lg overflow-hidden">
-                    <img src="{{ asset('./images/iwe-onka-mi.jpeg') }}" alt="iwe onka mi book" draggable="false">
-
-                </div>
-                <div class="bg-green-500 h-[60vh] rounded-lg overflow-hidden">
-                    <img src="{{ asset('./images/ise-ti-awon.jpeg') }}" alt="ise ti awon book" draggable="false">
-
-                </div>
-                <div class="bg-yellow-500 h-[60vh] rounded-lg overflow-hidden">
-                    <img src="{{ asset('./images/awon-yoruba.jpeg') }}" alt="awon yoruba book" draggable="false">
-
-                </div>
+                @foreach ($books as $book)
+                    <div class="bg-blue-500 h-[60vh] rounded-lg overflow-hidden">
+                        <img src="{{ asset($book['img_url']) }}" alt="awon yoruba book" draggable="false">
+                    </div>
+                @endforeach
 
 
             </div>
@@ -223,19 +204,15 @@
                         </h1>
 
                     </div>
+                    <p
+                        class="text-white text-center py-2 rounded-xl border-2 shadow-md shadow-red-300 border-red-800 bg-red-600 max-w-md text-2xl mt-2">
+                        The app for the
+                        school is
+                        Coming soon...
+                    </p>
 
 
-                    {{-- <div class="flex justify-center mt-10 lg:justify-start">
 
-                        <button
-                            class="magnetic-btn rounded-full relative px-4 py-3.5 bg-kemi-ojo lg:w-[200px] text-center shadow-md transition-all hover:shadow-black/30 ">
-                            <div
-                                class="rounded-full border w-full border-kemi-ojo -z-10 absolute px-4 py-6 top-1.5 left-0.5 lg:w-[200px] text-center ">
-                            </div>
-                            Learn more
-
-                        </button>
-                    </div> --}}
 
 
                     <div class="mt-10">
